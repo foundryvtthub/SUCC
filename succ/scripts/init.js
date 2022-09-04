@@ -144,13 +144,13 @@ Hooks.on("renderChatMessage", (message, html) => {
             });
         }
     } else if (redo_divs.length) {
-        console.log(redo_divs)
+        //console.log(redo_divs)
         for (let redo_div of redo_divs) {
             redo_div.addEventListener("click", (ev) => {
                 const condition = ev.currentTarget.dataset.conditionName.toLowerCase().replace(
                     " - ", "-").replace(" ", "-")
                 let actorOrTokenID = message.data.flags.succ.actorOrTokenID
-                console.log(condition)
+                //console.log(condition)
                 succ.apply_status(actorOrTokenID, condition, false)
             });
         }
